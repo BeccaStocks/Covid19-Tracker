@@ -1,8 +1,10 @@
 package io.javabrains.c19tracker.services;
 
 import io.javabrains.c19tracker.models.LocationStats;
+import io.javabrains.c19tracker.repository.LocationStatsRepo;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVRecord;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
@@ -51,6 +53,8 @@ public class CoronavirusDataService {
             newStats.add(locationStat);
         }
         allStats = newStats;
+
+
 
     }
 
